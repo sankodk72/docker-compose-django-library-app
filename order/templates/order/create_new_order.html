@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create order book</title>
+</head>
+<body>
+    <form method="post" action="#">
+        {%csrf_token%}
+        <select name="book">
+            <option value="">Choose the book</option>
+            {%for book in books%}
+            <option value="{{book.id}}">{{book.name|capfirst}}</option>
+            {%endfor%}
+        </select>
+        <div style="margin: 10px 0;">
+            <button type="submit">Make order</button>
+        </div>
+    </form>
+
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>All orders</title>
+</head>
+<body>
+    <ul>
+        {%for order in orders%}
+        <li>
+            <h2 style="margin: 10px 0 0">Order # {{order.id}}</h2>
+            <div>
+                <h4 style="margin: 0">
+                    Book name: {{order.book.name}}
+                </h4>
+                <h4 style="margin: 0">
+                    User: {{order.user.first_name}}
+                </h4>
+                <h4 style="margin: 0">
+                    Date: {{order.created_at}}
+                </h4>
+                <h4 style="margin: 0">
+                    Return date: {{order.plated_end_at}}
+                </h4>
+
+            </div>
+        </li>
+        {%endfor%}
+    </ul>
+
+</body>
+</html>

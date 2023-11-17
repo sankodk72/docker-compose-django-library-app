@@ -1,0 +1,13 @@
+{% extends 'book/base.html' %}
+
+{% block title %}
+  {{book.name}}
+{% endblock %}
+
+{% block content %}
+<h1> View a specific book</h1>
+<h2>{{ book.name }}</h2>
+<h2>
+  by {{ book.author.name }} {{ book.author.surname }} {{ book.author.patronymic }}
+</h2>
+{% endblock %}

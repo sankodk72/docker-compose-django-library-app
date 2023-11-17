@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add author page</title>
+</head>
+<body>
+    <form method="post" action="">
+        {%csrf_token%}
+        <div>
+            <input type="text" id="nameid" name="authorname"/>
+            <label for="nameid">Name</label>
+        </div>
+        <div>
+            <input type="text" id="surnameid" name="authorsurname"/>
+            <label for="surnameid">Surname</label>
+        </div>
+        <div>
+            <input type="text" id="patrid" name="authorpatr"/>
+            <label for="patrid">Patronymic</label>
+        </div>
+        <button type="submit">Create author</button>
+    </form>
+    <a href="{%url 'info'%}"><h1>View all info about authors</h1></a>
+</body>
+</html>

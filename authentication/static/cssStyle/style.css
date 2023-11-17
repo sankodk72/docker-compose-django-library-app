@@ -1,0 +1,118 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+a:active,
+a:hover,
+a {
+  text-decoration: none;
+  color: whitesmoke;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+ul,
+li,
+ol {
+  list-style-type: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+html,
+body {
+  height: 100%;
+  line-height: 1;
+  font-family: "Lexend", sans-serif;
+  font-size: 12px;
+  background-color: #fff;
+}
+
+form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+}
+
+.input-block{
+    margin: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.input-block input{
+    outline: none;
+    border: 1px solid black;
+    border-radius: 8px;
+    padding: 4px;
+    margin: 4px 0;
+}
+
+#createUser,
+#loginUser{
+    background-color: #58eb34;
+    padding: 16px;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+.checkbox-block{
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.checkbox-block > input{
+    margin: 0 10px;
+}
+
+.base{
+    display: flex;
+    justify-content: space-around;
+    padding-top: 10px;
+}
+
+.base h1{
+    font-size: 40px;
+}
+
+.base .logout{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
+    background-color: #3B44F6;
+    border-radius: 100%;
+}
+
+.base .logout img{
+    transform: rotate(90deg)
+}
+
+.auth{
+    font-size: 30px;
+    color: black;
+    background: #3B44F6;
+    padding: 10px;
+    border-radius: 24px;
+}

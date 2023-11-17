@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Delete authors</title>
+</head>
+<body>
+    <form method="post" action="delete">
+        {%csrf_token%}
+        {%for item in authors%}
+        <div style="display: flex">
+            <label for="{{item.id}}-box">
+                {{item.name}}
+                {{item.surname}}
+                {{item.patronymic}}
+            </label>
+            <input type="checkbox" name="{{item.name}}" id="{{item.id}}-box">
+        </div>
+        {%endfor%}
+        <button type="submit">Delete selected</button>
+    </form>
+    <a href="{%url 'info'%}"><h1>View all info about authors</h1></a>
+</body>
+</html>

@@ -1,0 +1,23 @@
+{%load static%}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{%static 'cssStyle/style.css'%}">
+    <title>Home page</title>
+</head>
+<body>
+    <div class="base">
+        {%if request.user.is_authenticated%}
+        <h1>Hello {{request.user.first_name}}</h1>
+        <a href="{%url 'logout'%}" class="logout">
+            <img src="{%static 'photos/login.svg'%}">
+        </a>
+        {%else%}
+            <a class="auth" href="{%url 'log'%}">Sign in</a>
+            <a class="auth" href="{%url 'reg'%}">Sign up</a>
+        {%endif%}
+    </div>
+</body>
+</html>

@@ -1,0 +1,25 @@
+{%load static%}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{%static 'cssStyle/styleBook.css'%}">
+    <title>All books</title>
+</head>
+<body>
+    <div class="wrapper">
+        <main>
+            {%for item in books%}
+            <div class="book-card">
+                <p>Book id: {{item.id}}</p>
+                <p>Book name: {{item.name}}</p>
+                <p>Book's author: {{item.author.name}} {{item.author.surname}} {{item.author.patronymic}}</p>
+                <p>Book count in library: {{item.count}}</p>
+            </div>
+            {%endfor%}
+        </main>
+    </div>
+
+</body>
+</html>

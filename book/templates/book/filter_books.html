@@ -1,0 +1,22 @@
+{% extends 'book/base.html' %}
+
+{%block title%}Filter books{%endblock%}
+
+{% block content %}
+<h1>The filter of books by various criteria author, title</h1>
+    {%if filter_by_author %}
+        {%for book in filter_by_author%}
+        <div style="display: flex">
+            <h3 style="margin: 10px 5px">{{book.name}} by </h3>
+            <h3 style="margin: 10px 5px">{{book.author.name}} {{book.author.surname}} {{book.author.patronymic}}</h3>
+        </div>
+        {%endfor%}
+    {%elif filter_by_name%}
+        {%for book in filter_by_name%}
+            <h3 style="margin: 10px 5px">{{book.name}} by </h3>
+            <h3 style="margin: 10px 5px">{{book.author.name}} {{book.author.surname}} {{book.author.patronymic}}</h3>
+        {%endfor%}
+    {%else%}
+        <h1>Error</h1>
+    {%endif%}
+{% endblock %}
